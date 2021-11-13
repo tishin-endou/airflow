@@ -2,9 +2,9 @@ from airflow import DAG
 from datetime import datetime, timedelta
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
-from airflow.providers.microsoft.azure.hooks.azure_data_factory import AzureDataFactoryHook
+# from airflow.providers.microsoft.azure.hooks.azure_data_factory import AzureDataFactoryHook
 # need to install azure data factory package by, pip install apache-airflow-providers-microsoft-azure
-
+from airflow.providers.microsoft.azure.hooks.data_factory import AzureDataFactoryHook
 
 azure_data_factory_conn = 'azure_data_factory_default'
 
